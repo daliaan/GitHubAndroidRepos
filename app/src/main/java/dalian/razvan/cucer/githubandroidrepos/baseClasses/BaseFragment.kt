@@ -4,15 +4,12 @@ import android.content.DialogInterface
 import android.os.Bundle
 import android.text.TextWatcher
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import dalian.razvan.cucer.githubandroidrepos.GitHubAndroidReposActivity
-import dalian.razvan.cucer.githubandroidrepos.R
+import dalian.razvan.cucer.githubandroidrepos.screens.GitHubAndroidReposActivity
 
 abstract class BaseFragment: Fragment(), BaseFragmentView {
 
@@ -20,8 +17,6 @@ abstract class BaseFragment: Fragment(), BaseFragmentView {
     protected lateinit var appActivity: GitHubAndroidReposActivity
 
     abstract fun whichLayout(): Int
-
-    abstract fun getTextWatcher(): TextWatcher?
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
