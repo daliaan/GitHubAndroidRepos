@@ -1,7 +1,7 @@
 package dalian.razvan.cucer.githubandroidrepos.screens.reposList
 
 import androidx.lifecycle.viewModelScope
-import dalian.razvan.cucer.core.data.network.Result
+import dalian.razvan.cucer.githubandroidrepos.core.network.Result
 import dalian.razvan.cucer.githubandroidrepos.R
 import dalian.razvan.cucer.githubandroidrepos.core.baseClasses.BaseViewModel
 import dalian.razvan.cucer.githubandroidrepos.core.baseClasses.RecyclerViewItemClickListener

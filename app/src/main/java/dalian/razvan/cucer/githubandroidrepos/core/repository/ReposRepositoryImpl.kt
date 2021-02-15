@@ -1,6 +1,6 @@
 package dalian.razvan.cucer.githubandroidrepos.core.repository
 
-import dalian.razvan.cucer.core.data.network.Result
+import dalian.razvan.cucer.githubandroidrepos.core.network.Result
 import dalian.razvan.cucer.githubandroidrepos.models.Repo
 import dalian.razvan.cucer.githubandroidrepos.core.network.API
 import dalian.razvan.cucer.githubandroidrepos.core.network.model.ReposResponse

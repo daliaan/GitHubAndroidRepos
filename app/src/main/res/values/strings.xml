@@ -3,4 +3,5 @@
     <string name="loading_repos_failed">Loading repositories from server failed.</string>
     <string name="repos_not_loaded">Repos not loaded.</string>
     <string name="no_more_repos">No more repos to load.</string>
+    <string name="try_api_load">Try to download it from API.</string>
 </resources>

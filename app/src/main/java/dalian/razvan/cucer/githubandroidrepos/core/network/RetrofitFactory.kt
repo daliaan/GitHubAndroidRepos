@@ -1,11 +1,8 @@
-package dalian.razvan.cucer.core.data.network
+package dalian.razvan.cucer.githubandroidrepos.core.network
 
 import android.content.Context
-import dalian.razvan.cucer.githubandroidrepos.core.network.API
-import dalian.razvan.cucer.githubandroidrepos.core.network.Endpoints
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
-import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -19,7 +16,7 @@ object RetrofitFactory {
             level = HttpLoggingInterceptor.Level.BODY
         }
         val headersInterceptor = Interceptor { chain ->
-            chain.proceed(chain.request().newBuilder().addHeader("Accept", "application/vnd.github.mercy-preview+json").build())
+            chain.proceed(chain.request().newBuilder().addHeader("Accept", getCorrectHeader(chain)).build())
         }
 
         okHttpClient.addInterceptor(loggingInterceptor)
@@ -33,5 +30,11 @@ object RetrofitFactory {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
                 .create(API::class.java)
+    }
+
+    private fun getCorrectHeader(chain: Interceptor.Chain): String {
+        if (chain.request().url.toUrl().toString().contains("https://api.github.com/search"))
+            return "application/vnd.github.mercy-preview+json"
+        return "application/vnd.github.v3+json"
     }
 }

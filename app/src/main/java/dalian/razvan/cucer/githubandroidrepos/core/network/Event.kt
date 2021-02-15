@@ -1,4 +1,4 @@
-package dalian.razvan.cucer.core.utils
+package dalian.razvan.cucer.githubandroidrepos.core.network
 
 import androidx.lifecycle.Observer
 

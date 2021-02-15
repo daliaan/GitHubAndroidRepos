@@ -1,7 +1,6 @@
 package dalian.razvan.cucer.githubandroidrepos.core.network
 
 import android.util.Log
-import dalian.razvan.cucer.core.data.network.Result
 import org.greenrobot.eventbus.EventBus
 import kotlinx.coroutines.CancellationException
 import retrofit2.Response

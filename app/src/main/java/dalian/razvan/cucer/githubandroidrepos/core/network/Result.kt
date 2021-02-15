@@ -1,6 +1,4 @@
-package dalian.razvan.cucer.core.data.network
-
-import dalian.razvan.cucer.githubandroidrepos.core.network.ApiError
+package dalian.razvan.cucer.githubandroidrepos.core.network
 
 sealed class Result<out T> {
     data class Success<out T>(val value: T) : Result<T>()
