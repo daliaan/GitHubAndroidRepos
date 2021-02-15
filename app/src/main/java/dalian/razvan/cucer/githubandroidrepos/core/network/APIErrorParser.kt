@@ -1,4 +1,4 @@
-package dalian.razvan.cucer.githubandroidrepos.network
+package dalian.razvan.cucer.githubandroidrepos.core.network
 
 import android.util.Log
 import com.google.gson.Gson

@@ -1,4 +1,4 @@
-package dalian.razvan.cucer.githubandroidrepos.network.model
+package dalian.razvan.cucer.githubandroidrepos.core.network.model
 
 import android.os.Parcel
 import android.os.Parcelable

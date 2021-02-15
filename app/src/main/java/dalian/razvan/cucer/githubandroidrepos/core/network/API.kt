@@ -1,6 +1,6 @@
-package dalian.razvan.cucer.githubandroidrepos.network
+package dalian.razvan.cucer.githubandroidrepos.core.network
 
-import dalian.razvan.cucer.githubandroidrepos.network.model.ReposResponse
+import dalian.razvan.cucer.githubandroidrepos.core.network.model.ReposResponse
 import retrofit2.Response
 import retrofit2.http.*
 

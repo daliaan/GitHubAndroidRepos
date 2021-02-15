@@ -3,6 +3,7 @@ package dalian.razvan.cucer.githubandroidrepos.models
 import android.os.Parcel
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import dalian.razvan.cucer.githubandroidrepos.core.baseClasses.BaseModel
 
 data class Repo(@SerializedName("name") val name: String = "",
                 @SerializedName("display_name") val displayName: String = "",
@@ -12,7 +13,7 @@ data class Repo(@SerializedName("name") val name: String = "",
                 @SerializedName("released") val released: String = "",
                 @SerializedName("featured") val isFeatured: Boolean = false,
                 @SerializedName("curated") val isCurated: Boolean = false,
-                @SerializedName("score") val score: Double = 1.1): Parcelable {
+                @SerializedName("score") val score: Double = 1.1): BaseModel(), Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString().toString(),
         parcel.readString().toString(),

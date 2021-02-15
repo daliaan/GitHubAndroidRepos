@@ -1,9 +1,11 @@
 package dalian.razvan.cucer.core.data.network
 
 import android.content.Context
-import dalian.razvan.cucer.githubandroidrepos.network.API
-import dalian.razvan.cucer.githubandroidrepos.network.Endpoints
+import dalian.razvan.cucer.githubandroidrepos.core.network.API
+import dalian.razvan.cucer.githubandroidrepos.core.network.Endpoints
+import okhttp3.Interceptor
 import okhttp3.OkHttpClient
+import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -16,8 +18,12 @@ object RetrofitFactory {
         val loggingInterceptor = HttpLoggingInterceptor().apply {
             level = HttpLoggingInterceptor.Level.BODY
         }
+        val headersInterceptor = Interceptor { chain ->
+            chain.proceed(chain.request().newBuilder().addHeader("Accept", "application/vnd.github.mercy-preview+json").build())
+        }
 
         okHttpClient.addInterceptor(loggingInterceptor)
+        okHttpClient.addInterceptor(headersInterceptor)
         okHttpClient.readTimeout(25, TimeUnit.SECONDS)
         okHttpClient.connectTimeout(25, TimeUnit.SECONDS)
 

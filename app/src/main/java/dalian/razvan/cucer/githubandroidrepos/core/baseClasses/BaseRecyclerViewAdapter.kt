@@ -1,4 +1,4 @@
-package dalian.razvan.cucer.githubandroidrepos.baseClasses
+package dalian.razvan.cucer.githubandroidrepos.core.baseClasses
 
 import androidx.recyclerview.widget.RecyclerView
 

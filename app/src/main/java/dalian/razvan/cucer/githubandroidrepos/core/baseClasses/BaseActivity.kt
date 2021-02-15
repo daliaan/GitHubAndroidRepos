@@ -1,4 +1,4 @@
-package dalian.razvan.cucer.githubandroidrepos.baseClasses
+package dalian.razvan.cucer.githubandroidrepos.core.baseClasses
 
 import android.content.Context
 import android.graphics.Rect

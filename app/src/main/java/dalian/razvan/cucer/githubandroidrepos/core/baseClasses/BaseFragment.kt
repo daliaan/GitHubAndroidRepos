@@ -1,8 +1,7 @@
-package dalian.razvan.cucer.githubandroidrepos.baseClasses
+package dalian.razvan.cucer.githubandroidrepos.core.baseClasses
 
 import android.content.DialogInterface
 import android.os.Bundle
-import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
